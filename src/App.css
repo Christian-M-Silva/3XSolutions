@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-header{
+    @apply h-32 text-center pt-10;
+    background-image: url(images/header.png);
+    background-repeat: no-repeat;
+    background-size: 100% 18rem;
+}
+
+.title-header{
+    @apply text-white text-base lg:text-2xl font-bold;
+    font-family: "Google Sans", arial, sans-serif;
+}

@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: "Google Sans", arial, sans-serif;
+}
+
+.container-full-pai{
+   @apply h-screen bg-white;
+}
+
+.bg-header{
+    @apply h-32 text-center pt-10;
+    background-image: url(images/header.png);
+    background-repeat: no-repeat;
+    background-size: 100% 18rem;
+}
+
+.title-header{
+    @apply text-white text-base lg:text-2xl font-bold;
+}
+
+.area-login-register{
+    @apply  flex items-center justify-center gap-10 flex-wrap py-3;
+}
+
+.area-login{
+    @apply h-60 w-[calc(100vw-15%)] md:w-96 landscape:w-96 flex flex-col gap-3 ;
+}
+
+.title-login{
+    @apply font-bold text-sm;
+    color: #6D6D6D;
+}
+
+.input-login{
+    @apply mt-5 rounded p-1 px-4;
+    width: 100%;
+    box-shadow:0px 1.4px 2.7px rgba(0, 0, 0, 0.02),0px 3.4px 6.5px rgba(0, 0, 0, 0.028),0px 6.4px 12.1px rgba(0, 0, 0, 0.035),0px 11.4px 21.7px rgba(0, 0, 0, 0.042),0px 21.3px 40.5px rgba(0, 0, 0, 0.05),0px 51px 97px rgba(0, 0, 0, 0.07);
+}
+
+.error-message{
+    @apply text-red-700
+}
+
+.button-login{
+    @apply text-white text-sm font-bold rounded w-[100%] text-center p-2 mt-8;
+    background-color: #003A5C;
+}
+
+.area-register{
+    @apply h-[435px] w-[calc(100vw-15%)] pt-4 md:h-[26rem] md:w-[34rem] flex flex-col items-center ;
+    background-image: url(images/bg-cadastro.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.title-register{
+    @apply font-bold text-sm px-4 md:px-0;
+    color: #6D6D6D;
+}
+
+.area-input-register{
+   @apply w-64 md:w-[25rem] mx-auto ;
+}
+
+.input-register{
+    @apply mt-7 rounded p-1 px-4;
+    width: 100%;
+    box-shadow:0px 1.4px 2.7px rgba(0, 0, 0, 0.02),0px 3.4px 6.5px rgba(0, 0, 0, 0.028),0px 6.4px 12.1px rgba(0, 0, 0, 0.035),0px 11.4px 21.7px rgba(0, 0, 0, 0.042),0px 21.3px 40.5px rgba(0, 0, 0, 0.05),0px 51px 97px rgba(0, 0, 0, 0.07);
+}
+
+.button-register{
+    @apply text-white text-sm font-bold rounded w-[100%] text-center p-2 mt-5;
+    background-color: #003A5C; 
+}
+
+@media screen and (min-width: 768px) {
+    .area-register{
+        background-image: url(images/bg-cadastro.png);
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 768px) {
+    .area-register{   
+        background-image: url(images/bg-cadastro.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .input-register, .button-register{
+        padding-top: .5rem;
+    }
+    
+    .area-input-register{
+        width: 25rem;
+    }
+}
+
+@media screen and (min-height: 768px) {
+    .area-login-register{
+        @apply h-[80vh];
+    }
+}

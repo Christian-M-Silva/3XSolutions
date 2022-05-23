@@ -4,25 +4,30 @@ import * as yup from "yup"
 export function Login() {
     const getDateUserLogin = (values) => console.log(values)
 
+    const loginValidation = yup.object().shape({
+        email: yup.string().email("Este dado não é um E-mail").required("Este campo é obrigatório"),
+        senha: yup.string().required("Este campo é obrigatório")
+    })
     return(
-            <div className="border h-40 w-64 flex flex-col gap-3">
-                <h1>Acesse sua conta</h1>
+            <div className="area-login">
+                <h1 className="title-login">ACESSE SUA CONTA</h1>
 
-                <Formik initialValues={{}} onSubmit={getDateUserLogin}>
+                <Formik initialValues={{}} onSubmit={getDateUserLogin} validationSchema={loginValidation}>
                     <Form>
-                        <div>
-                            <Field type="email" name="email" placeHolder="E-mail" />
 
-                            <ErrorMessage component="span" name="email"/>
-                        </div> 
+                       
+                            <Field name="email" placeHolder="E-mail" className="input-login"/>
 
-                        <div>
-                            <Field type="password" name="senha" placeHolder="Senha" />
+                            <ErrorMessage component="span" name="email" className="error-message"/>
+                        
 
-                            <ErrorMessage component="span" name="senha"/>
-                        </div>
+                        
+                            <Field name="senha" placeHolder="Senha" className="input-login"/>
 
-                        <button type="submit">Login</button> 
+                            <ErrorMessage component="span" name="senha" className="error-message"/>
+                        
+
+                        <button type="submit" className="button-login">Entrar</button> 
                     </Form>
                 </Formik>
             </div>

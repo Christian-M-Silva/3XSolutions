@@ -1,8 +1,16 @@
 import { Formik, Form, Field, ErrorMessage } from "formik"
 import * as yup from "yup"
+import Axios from "axios"
 
 export function Login() {
-    const getDateUserLogin = (values) => console.log(values)
+    const getDateUserLogin = (values) => {
+        Axios.post("http://localhost:3001/login", {
+          email: values.email,
+          password: values.password,
+        }).then((response) => {
+          alert(response.data.msg)
+        })
+      }
 
     const loginValidation = yup.object().shape({
         email: yup.string().email("Este dado não é um E-mail").required("Este campo é obrigatório"),

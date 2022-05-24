@@ -1,8 +1,18 @@
 import { Formik, Form, Field, ErrorMessage } from "formik"
 import * as yup from "yup"
+import Axios from "axios"
 
 export function Register() {
-    const getDateUserRegister = (values) => console.log(values)
+    const getDateUserRegister = (values) => {
+        Axios.post("http://localhost:3001/register", {
+            nameUser: values.nameUser,
+            email: values.email,
+            password: values.password,
+        }).then((response) => {
+            alert(response.data.msg)
+            console.log(response)
+        })
+    }
 
     const RegisterValidation = yup.object().shape({
         nameUser: yup.string().required("Esse campo é obrigatório"),

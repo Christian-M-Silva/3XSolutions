@@ -3,6 +3,7 @@ import { Header } from './partials/Header'
 import { Login } from './partials/Login'
 import { Register } from './partials/Register'
 
+
 export function App() {
     return(
         <div className="container-full-pai">

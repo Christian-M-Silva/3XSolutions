@@ -52,11 +52,14 @@ app.post("/login", (req, res) => {
       }
       if (result.length > 0) {
           res.send({
-              msg: "Usuário Logado"
+               
+            nameUser: result[0].name_user,
+            email: email
+              
           })
       } else {
         res.send({ msg: 
-            "E-mail ou Senha incorreta" 
+          "E-mail ou Senha incorreta" 
         })
       }
     })

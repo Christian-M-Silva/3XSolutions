@@ -1,15 +1,23 @@
 import { Formik, Form, Field, ErrorMessage } from "formik"
 import * as yup from "yup"
 import Axios from "axios"
+import Cookie from "js-cookie"
 
 export function Login() {
-    const getDateUserLogin = (values) => {
-        Axios.post("http://localhost:3001/login", {
-          email: values.email,
-          password: values.senha,
-        }).then((response) => {
-          alert(response.data.msg)
-        })
+    const getDateUserLogin = async(values) => {
+
+          const response = await Axios.post("http://localhost:3001/login", {
+            email: values.email,
+            password: values.senha,
+          })
+
+          Cookie.set("user" , JSON.stringify(response.data))
+          if (!response.data.msg) {
+            window.location.href = "/welcome"
+          }else{
+            alert("Senha ou Usuário inválido")
+          }
+        
       }
 
     const loginValidation = yup.object().shape({

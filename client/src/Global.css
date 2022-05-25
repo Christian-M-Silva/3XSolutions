@@ -7,7 +7,7 @@ body{
 }
 
 .container-full-pai{
-   @apply h-screen bg-white;
+   @apply h-screen bg-white relative;
 }
 
 .bg-header{
@@ -19,6 +19,19 @@ body{
 
 .title-header{
     @apply text-white text-base lg:text-2xl font-bold;
+}
+
+.title-Welcome{
+    @apply text-center absolute top-[50%] left-[50%] font-extrabold;
+    transform: translate(-50%, -50%);
+}
+
+.name-user{
+    background-image: linear-gradient(to right, #91D8F7, #003A5C);
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    color: black;
+    
 }
 
 .area-login-register{
@@ -74,6 +87,10 @@ body{
 .button-register{
     @apply text-white text-sm font-bold rounded w-[100%] text-center p-2 mt-5;
     background-color: #003A5C; 
+}
+
+.button-exit{
+    @apply bg-red-600 shadow-lg shadow-red-600/60 p-1 rounded ml-2;
 }
 
 @media screen and (min-width: 768px) {

@@ -7,10 +7,9 @@ export function Register() {
         Axios.post("http://localhost:3001/register", {
             nameUser: values.nameUser,
             email: values.email,
-            password: values.password,
+            password: values.senha,
         }).then((response) => {
             alert(response.data.msg)
-            console.log(response)
         })
     }
 

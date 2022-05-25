@@ -6,7 +6,7 @@ export function Login() {
     const getDateUserLogin = (values) => {
         Axios.post("http://localhost:3001/login", {
           email: values.email,
-          password: values.password,
+          password: values.senha,
         }).then((response) => {
           alert(response.data.msg)
         })

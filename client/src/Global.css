@@ -24,6 +24,7 @@ body{
 .title-Welcome{
     @apply text-center absolute top-[50%] left-[50%] font-extrabold;
     transform: translate(-50%, -50%);
+    @apply w-52;
 }
 
 .name-user{
@@ -31,7 +32,6 @@ body{
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent;
     color: black;
-    
 }
 
 .area-login-register{

@@ -18,7 +18,7 @@ export function Welcome() {
             
             <button className="button-exit" onClick={exit}>Sair</button>
 
-            <h1 className="title-Welcome border w-52">Olá, seja bem vindo(a) <span className="name-user">{user.nameUser}</span></h1>
+            <h1 className="title-Welcome">Olá, seja bem vindo(a) <span className="name-user">{user.nameUser}</span></h1>
         </Fragment>
     )
 }

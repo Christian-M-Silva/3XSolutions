@@ -5,6 +5,8 @@ import { Register } from "../partials/Register"
 
 
 export function RegisterLogin() {
+    document.title = 'Login e Cadastro - 3X Solutions'
+    
     return(
         <Fragment>
             <Header />

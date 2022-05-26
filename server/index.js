@@ -1,3 +1,5 @@
+/**Rode 'npm run devStart' no terminal*/
+
 const express = require('express')
 const app = express()
 const mysql = require('mysql2')
@@ -6,7 +8,7 @@ const db = mysql.createPool({
     host:"localhost",
     user:"root",
     password:"password",
-    database:"user_schama",
+    database:"user_database",
 })
 
 app.use(express.json())

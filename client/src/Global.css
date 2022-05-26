@@ -18,7 +18,7 @@ body{
 }
 
 .title-header{
-    @apply text-white text-base lg:text-2xl font-bold;
+    @apply text-white text-sm landscape:text-2xl md:text-2xl font-bold;
 }
 
 .title-Welcome{

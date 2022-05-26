@@ -10,13 +10,15 @@ export function Welcome() {
         window.location.href = "/"
         Cookie.set("user", "")
     }
+
+    document.title = 'Welcome - 3X Solutions'
     return(
         <Fragment>
             <Header />
             
-            <h1 className="title-Welcome">Olá, seja bem vindo(a) <span className="name-user">{user.nameUser}</span></h1>
-
             <button className="button-exit" onClick={exit}>Sair</button>
+
+            <h1 className="title-Welcome border w-52">Olá, seja bem vindo(a) <span className="name-user">{user.nameUser}</span></h1>
         </Fragment>
     )
 }

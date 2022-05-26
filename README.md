@@ -29,7 +29,7 @@
 
 Desktop ![](Screenshot/RegisterLoginDesktop.PNG) ![](Screenshot/WelcomeDesktop.PNG)  
 
-Mobile Portrait 
+Mobile Portrait <br>
 ![](Screenshot/RegisterLoginMobilePortrait.PNG) ![](Screenshot/WelcomeMobilePortrait.PNG)
 
 Mobile Landscape 
